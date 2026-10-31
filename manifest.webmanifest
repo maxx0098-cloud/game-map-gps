@@ -1,0 +1,10 @@
+{
+  "name": "GAME MAP GPS",
+  "short_name": "GAME MAP",
+  "description": "Real-world GPS with an open-world game-inspired map.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090e16",
+  "theme_color": "#090e16",
+  "orientation": "portrait"
+}

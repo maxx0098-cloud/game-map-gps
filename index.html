@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090e16">
+  <title>GAME MAP GPS</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">G</span><div><strong>GAME MAP GPS</strong><small>REAL WORLD · GAME FEEL</small></div></div>
+      <button id="themeButton" class="icon-button" aria-label="Change map theme">◐</button>
+    </header>
+
+    <section class="search-panel">
+      <form id="searchForm">
+        <span class="search-icon">⌕</span>
+        <input id="destination" type="search" placeholder="Search a place or destination" autocomplete="off">
+        <button type="submit">GO</button>
+      </form>
+      <div id="searchStatus" class="status" aria-live="polite">Ready to explore.</div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section id="map" aria-label="Interactive real-world map"></section>
+
+    <div class="map-controls">
+      <button id="locateButton" class="control-button"><span>◎</span> MY LOCATION</button>
+      <button id="clearRouteButton" class="control-button secondary">CLEAR ROUTE</button>
+    </div>
+
+    <aside class="theme-drawer" id="themeDrawer" hidden>
+      <strong>SELECT YOUR WORLD</strong>
+      <button data-style="liberty">OPEN WORLD</button>
+      <button data-style="dark">NIGHT DRIVE</button>
+      <button data-style="bright">DAYLIGHT</button>
+      <button data-style="3d">3D CITY</button>
+    </aside>
+
+    <footer class="bottom-info">
+      <span id="gpsStatus">GPS: NOT CONNECTED</span>
+      <span id="coordinates">WAITING FOR LOCATION</span>
+    </footer>
+  </main>
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
